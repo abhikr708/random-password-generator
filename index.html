@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">k
+</head>
+
+<body>
+    <div class="container">
+        <!-- heading -->
+        <h1>PASSWORD GENERATOR</h1>
+
+        <!-- output box -->
+        <div class="display_container">
+            <input type="text" readonly placeholder="Password" passwordDisplay >
+            <button class="copyBtn">
+                <span copyMsg></span>
+                <img src="copy.svg" alt="Copy" width="22px" height="22px">
+            </button>
+        </div>
+       
+
+        <!-- input box -->
+        <div class="inputBox">
+            <div class="passLength">
+                <p>Password Length</p>
+                <p passLength>0</p>
+            </div>
+            <!-- slider -->
+            <input type="range" min="0" max="20" class="slider" step="1">
+
+            <!-- checkboxes -->
+            <div class="check">
+                <input type="checkbox" id="upperCase">
+                <label for="upperCase">Include Uppercase Letters</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="lowerCase">
+                <label for="lowerCase">Include Lowercase Letters</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+
+            <!-- strength indicator -->
+            <div class="indicatorDiv">
+                <p>Strength</p>
+                <div class="indicator"></div>
+            </div>
+
+            <!-- Generate button -->
+            <button class="generatePassword">Generate Password</button>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

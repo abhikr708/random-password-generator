@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268, 47%, 21%);
+    --lt-violet2: hsl(281, 89%, 26%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+
+    --vb-yellow: hsl(52, 100%, 62%);
+
+    --pl-white: hsl(0, 0%, 100%);
+
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+
+    --dk-text: hsl(198, 20%, 13%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(170deg, rgb(164, 57, 197) 0%, rgb(124, 9, 134) 35%, rgb(52, 5, 71) 100%);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+}
+h1{
+    color: var(--pl-white);
+    opacity: 0.70;
+    letter-spacing: 2px;
+    line-height: 2;
+}
+/* output box */
+.display_container{
+    display: flex;
+    background-color: var(--dk-violet);
+    margin: 1rem, 0;
+    padding: 0.35rem;
+    position: relative;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid var(--vb-yellow);
+
+}
+.display_container input{
+    border: none;
+    outline: none;
+    padding: 1.15rem 1rem;
+    background-color: transparent;
+    font-weight: 400px;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    padding-right: 3.25rem;
+    line-height: 30px;
+    width: 100%;;
+    color: var(--vb-yellow);
+}
+.display_container input::placeholder{
+    color: var(--vb-yellow);
+    text-transform: uppercase;
+    top: 50%;
+    left: 1.5rem;
+    line-height: 30px;
+    opacity: 0.80;
+}
+.display_container button{
+    background-color: transparent;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    border: none;
+}
+
+/* input box */
+.inputBox{
+    display: relative;
+    top: 15px;
+    background-color: var(--dk-violet);
+    margin: 1rem, 0;
+    padding: 2rem;
+    position: relative;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid var(--vb-yellow);
+}
+
+/* password length div */
+.passLength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.passLength p:nth-child(1){    
+    color: var(--pl-white);
+    font-size: 1.5rem;
+}
+.passLength p:nth-child(2){
+    color: var(--vb-yellow);
+    font-size: 1.5rem;
+}
+
+
+/* indicator */
+.indicatorDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+}
+.indicatorDiv p{
+    font-size: 1.5rem;
+    color: var(--pl-white);
+}
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+/* generate button */
+.generatePassword{
+    width: 100%;
+    background-color: var(--lt-violet);
+    border: none;
+    font-size: 1.5rem;
+    color: var(--vb-yellow);
+    border-radius: 1rem;
+    border-bottom: 0.3rem solid var(--vb-yellow);
+    height: 70px;
+    cursor: pointer;
+}
+
+/* checkboxes */
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+.check label{
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: var(--pl-white);
+}
+.check input{
+    appearance: none;  /* REMOVE DEFAULT BROWSER'S STYLE */
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--vb-cyan);
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.5rem; 
+}
+.check input:checked{
+    background-color: var(--vb-cyan);
+}
+.check input:checked::before{
+    content: "✔";
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dk-text);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+}
+
+/* slider */
+.slider{
+    width: 100%;
+    appearance: none;
+    background-color: var(--vb-violet);
+    height: 0.76rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 2rem;
+    border: none;    
+    outline: none;
+}
+
+/* slider thumb */
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    background-color: var(--vb-yellow);
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 5px rgba(255, 229, 61, 0.5);
+    transition: all 100ms ease-in;
+}
+.slider:focus{
+    outline: 3px solid var(--vb-yellow);
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid var(--vb-yellow);
+    background-color: var(--dk-violet);
+    box-shadow: 0px 0px 20px 8px rgba(255, 229, 61, 0.8);
+    
+}
